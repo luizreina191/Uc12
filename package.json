@@ -12,17 +12,18 @@
   },
   "license": "ISC",
   "author": "",
-  "type": "module",
-  "main": "src/index.js",
+  "main": "dist/main.js",
   "scripts": {
     "start": "electron .",
-    "dev": "electron .",
-    "build": "echo \"No build configured\"",
+    "build": "tsc",
+    "dev": "concurrently \"tsc -w\" \"electron .\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "@types/node": "^25.2.0",
+    "concurrently": "^8.2.0",
     "electron": "^40.1.0",
     "prettier": "^2.8.8",
-    "concurrently": "^8.2.0"
+    "typescript": "^5.9.3"
   }
 }
