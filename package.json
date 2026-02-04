@@ -12,12 +12,17 @@
   },
   "license": "ISC",
   "author": "",
-  "type": "commonjs",
-  "main": "index.js",
+  "type": "module",
+  "main": "src/index.js",
   "scripts": {
+    "start": "electron .",
+    "dev": "electron .",
+    "build": "echo \"No build configured\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "electron": "^40.1.0"
+    "electron": "^40.1.0",
+    "prettier": "^2.8.8",
+    "concurrently": "^8.2.0"
   }
 }
