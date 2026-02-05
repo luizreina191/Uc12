@@ -24,3 +24,6 @@ function handleGetInfo() {
 
 document.getElementById('btn')?.addEventListener('click', handleClick);
 document.getElementById('btn-info')?.addEventListener('click', handleGetInfo);
+
+export { };
+
