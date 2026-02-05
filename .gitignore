@@ -10,7 +10,9 @@ pnpm-debug.log*
 .env.*.local
 
 # Build output
-dist/
+dist/*.js
+!dist/renderer.js
+dist/*.map
 build/
 out/
 release/
