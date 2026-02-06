@@ -15,7 +15,10 @@ function createWindow() {
     });
     // Em modo de desenvolvimento, carrega o servidor Vite
     if (process.env.NODE_ENV === 'development') {
-        win.loadURL('http://localhost:5173/');
+        // Aguarda um pouco para o servidor Vite iniciar
+        setTimeout(() => {
+            win.loadURL('http://localhost:5173/');
+        }, 2000);
     }
     else {
         win.loadFile('./dist/index.html');
