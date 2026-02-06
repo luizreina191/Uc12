@@ -16,7 +16,7 @@
   "scripts": {
     "start": "electron .",
     "build": "tsc",
-    "dev": "concurrently \"tsc -w\" \"electron .\"",
+    "dev": "concurrently \"cd src/renderer && npm run dev\" \"tsc -w\" \"set NODE_ENV=development && electron .\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {

@@ -13,7 +13,13 @@ function createWindow() {
             preload: path_1.default.join(__dirname, 'preload.js')
         }
     });
-    win.loadFile('./dist/index.html');
+    // Em modo de desenvolvimento, carrega o servidor Vite
+    if (process.env.NODE_ENV === 'development') {
+        win.loadURL('http://localhost:5173/');
+    }
+    else {
+        win.loadFile('./dist/index.html');
+    }
 }
 // Recebe mensagens do renderer
 electron_1.ipcMain.on('message', function (event, data) {

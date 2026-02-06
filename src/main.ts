@@ -9,7 +9,13 @@ function createWindow() {
       preload: path.join(__dirname, 'preload.js')
     }
   });
-  win.loadFile('./dist/index.html');
+ 
+  // Em modo de desenvolvimento, carrega o servidor Vite
+  if (process.env.NODE_ENV === 'development') {
+    win.loadURL('http://localhost:5173/');
+  } else {
+    win.loadFile('./dist/index.html');
+  }
 }
 
 // Recebe mensagens do renderer
